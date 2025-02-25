@@ -30,6 +30,7 @@ class Ball:
 
 
 ball = Ball(x=width//2, y=height//2, radius=20, color=(255, 0, 0), dx=5, dy=3)
+ball2 = Ball(x=width//4, y=height//4, radius=10, color=(0, 100, 0), dx=10, dy=2)
 
 while True:
     for event in pygame.event.get():
@@ -38,8 +39,11 @@ while True:
             sys.exit()
 
     ball.update()
-
+    ball2.update()
+    
     screen.fill((0, 60, 120))
     ball.draw(screen)
+    ball2.draw(screen)
+    
     pygame.display.flip()
     clock.tick(60)
